@@ -1,46 +1,27 @@
-# CaffeineOverflow
-Βέκιος Παναγιώτης 03114094
+# CaffeineOverflow -group project
+Christina Nakou Anastasia Mela Giannis Grigorakos Panagiotis Vekios Theodoros Davarakis
 
-Γρηγοράκος Ιωάννης 03113515
+To test and run the project
 
-Δαβαράκης Θεόδωρος-Θηρίμαχος 03115002
+For the backend:
 
-Μελά Αναστασία 03114010
+The main code is in the scr path.
 
-Νάκου Χριστίνα 03114735
+Run: git clone.
 
+install Node.js.
 
-Πληροφορίες για το πρόγραμμα:
+install MongoDB.
 
-Για το backend:
+Run: npm install set caffeine_overflow_jwtPrivateKey=caffeine/ export caffeine_overflow_jwtPrivateKey=caffeine
 
- Ο φάκελος με όλο τον κώδικα είναι ο φάκελος που βρίσκεται μέσα στο src φάκελο.
- 
- Κάνουμε git clone.
- 
- Εγκαθιστούμε το Node.js.
- 
- Εγκαθιστούμε τη MongoDB.
- 
- Έπειτα σε ένα terminal τρέχουμε την εντολή npm install (εφόσον έχουμε εγκαταστήσει επιτυχώς το Node.js).
- 
- Αφού ολοκληρωθεί το npm install εκτελούμε την εντολή set caffeine_overflow_jwtPrivateKey=caffeine (export σε linux αντι για   set) για να ορίσουμε το κλειδί που θα χρησιμοποιήσουμε για την κρυπτογράφηση του token. 
- 
- Για Linux έπειτα τρέχουμε την εντολή sudo mongod. Αν χρησιμοποιούμε windows δεν εκτελούμε αυτή την εντολή και προχωράμε κατευθείαν στην επόμενη.
- 
- Εκτέλούμε την εντολή node index.js και πλέον το backend τρέχει και ακούει στην port 8765.  
- 
- Για το frondend :
- 
- o φάκελος είναι ο frontend.zip και οι εντολές για να τρέξει είναι:
- 
- npm install
- 
- Εγκαθιστούμε το με την εντολή npm install -g @angular/cli
- 
- ng serve --ssl true --ssl-key "<..path_of_backend/backend/server.key>" --ssl-cert "<..path_of_backend/backend/server.cert>"
- 
- όπου path_of_backend: θα προσθέσετε το path που βρίσκεται ο φάκελος backend, μέσα στο backend φάκελο έχει αυτά τα αρχεία:
- server.key, server.cert
+sudo mongod node index.js backend is running and listening to port 8765.
 
-και ανοίγετε στο browser τη σελίδα: https://localhost:4200/
+For the frondend :
+
+the code is in path frontent.zip Run:
+npm install npm install -g @angular/cli
+
+ng serve --ssl true --ssl-key "<..path_of_backend/backend/server.key>" --ssl-cert "<..path_of_backend/backend/server.cert>"
+
+Last step: Open on browser the page: https://localhost:4200/
