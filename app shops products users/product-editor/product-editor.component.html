@@ -1,0 +1,59 @@
+<form [formGroup]="productForm" (ngSubmit)="onSubmit()">
+  
+    <label>
+        'Ονομα:
+      <input type="text" formControlName= "name" required>
+    </label>
+    
+    <div>
+    <label>
+      Περιγραφή:
+      <input type="text" formControlName="description" required>
+    </label>
+  
+    <label>
+      Κατηγορία:
+      <input type="text" formControlName="category" required>
+    </label>
+
+    <div formArrayName="tags">
+      <h3>Tags</h3> <button (click)="addtags()">Add Tags</button>
+    
+    <div *ngFor="let tags of tags.controls; let i=index">
+        <!-- The repeated alias template  -->
+        <label>
+          Tags:
+          <input type="text" [formControlName]="i">
+        </label>
+      </div>
+    </div>
+
+    <div formGroupName="extraData">
+      <h3>ExtraData</h3>
+    <label>
+        Κατασκευαστής:
+        <input type="text" formControlName="brand" required>
+      </label>
+
+      <label>
+        Ποσότητα:
+          <input type="text" formControlName="quantity" required>
+      </label>
+
+      <label>
+        Τύπος Ποσότητας:
+            <input type="text" formControlName="typeOfQuantity" required>
+      </label>
+
+      <label>
+        Τύπος:
+          <input type="text" formControlName="type" required>
+      </label>
+    </div>
+    </div>
+    
+
+   
+  <button type="submit" [disabled]="!productForm.valid" >Submit</button>
+  
+  </form>

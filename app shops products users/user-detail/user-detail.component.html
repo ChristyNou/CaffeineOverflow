@@ -1,0 +1,30 @@
+<div *ngIf="user">
+
+    <h2>{{user.username | uppercase}} ΛΕΠΤΟΜΕΡΕΙΕΣ</h2>
+    <div><span>Κωδικός: </span>{{user._id}}
+    </div>
+    <div>
+        <span>Ε-mail: </span>{{user.email}}
+    </div>
+    <div>
+        <span>Ενεργός: </span>{{user.isActive}}
+    </div>
+    <div>
+        <span>Διαχειριστής: </span>{{user.isAdmin}}
+    </div>
+   
+    <div>
+      <label>Ενεργός:
+        <input [(ngModel)]="user.isActive" placeholder="isActive"/>
+      </label>
+    </div>
+    <div>
+      <label>Διαχειριστής:
+          <input [(ngModel)]="user.isAdmin" placeholder="isAdmin"/>
+      </label>
+    </div>
+    
+  
+    <button (click)="goBack()">Πίσω</button>
+    <button (click)="save()">Αποθήκευση</button>
+  </div>

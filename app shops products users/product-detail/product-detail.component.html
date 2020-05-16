@@ -1,0 +1,86 @@
+<div *ngIf="product">
+
+    <h2>{{product.name | uppercase}} ΛΕΠΤΟΜΕΡΕΙΕΣ</h2>
+    <div><span>Κωδικός: </span>{{product._id}}
+    </div>
+    <div>
+        <span>Περιγραφή: </span>{{product.description}}
+    </div>
+    <div>
+        <span>Κατηγορία: </span>{{product.category}}
+    </div>
+    <div>
+        <span>tags: </span>{{product.tags}}
+    </div>
+   <div>
+        <span>Κατασκευαστής: </span>{{product.extraData.brand}}
+    </div>
+    <div>
+        <span>Ποσότητα: </span>{{product.extraData.quantity}}
+    </div>
+    <div>
+        <span>Τύπος Ποσότητας: </span>{{product.extraData.typeOfQuantity}}
+    </div>
+    <div>
+        <span>Τύπος: </span>{{product.extraData.type}}
+    </div> 
+    <div>
+        <span>withdrawn: </span>{{product.withdrawn}}
+    </div>
+    <div>
+      <label>Όνομα:
+        <input [(ngModel)]="product.name" placeholder="name"/>
+      </label>
+    </div>
+    <div>
+      <label>Περιγραφή:
+          <input [(ngModel)]="product.description" placeholder="description"/>
+      </label>
+    </div>
+    <div>
+        <label>Κατηγορία:
+            <input [(ngModel)]="product.category" placeholder="category"/>
+        </label>
+      </div>
+    <div>
+    <div>
+        <label>tags:
+            <input [(ngModel)]="product.tags" placeholder="tags"/>
+        </label>
+    </div>
+    <div>
+        <label>withdrawn:
+            <input [(ngModel)]="product.withdrawn" placeholder="withdrawn"/>
+        </label>
+    </div>
+
+        <label>Κατασκευαστής:
+             <input [(ngModel)]="product.extraData.brand" placeholder="extraData.brand"/>
+        </label>
+    </div>
+
+
+    <div>
+        <label>Ποσότητα:
+            <input [(ngModel)]="product.extraData.quantity" placeholder="extraData.quantity"/>
+        </label>
+    </div>
+
+    <div>
+        <label>Τύπος Ποσότητας:
+                <input [(ngModel)]="product.extraData.typeOfQuantity" placeholder="extraData.typeOfQuantity"/>
+        </label>
+    </div>
+
+
+    <div>
+         <label>Τύπος:
+            <input [(ngModel)]="product.extraData.type" placeholder="extraData.type"/>
+        </label>
+    </div>
+
+  
+    <button (click)="goBack()">Πίσω</button>
+    <button (click)="save()">Αποθήκευση</button>
+    <button class="delete" title="delete product" (click)="delete(product)">Διαγραφή</button>
+  </div>

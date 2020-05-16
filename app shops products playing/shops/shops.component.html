@@ -1,0 +1,35 @@
+<p>
+
+
+</p>
+
+<nav>
+    <a routerLink="/addshop">AddShop</a> 
+</nav>
+
+<router-outlet></router-outlet>
+
+ <h2>My Shops</h2>
+
+
+<ul class="shops">
+  <li *ngFor="let shop of shops" > <!-- | paginate: {itemsPerPage: $count, currentPage: p}" -->
+    <a routerLink="/shops/{{shop._id}}">
+      <span class="badge">{{shop.name}} {{shop._id}} </span>
+    </a>
+ <!-- <button class="delete" title="delete shop"
+  (click)="delete(shop)">x</button> -->
+  </li>
+</ul>
+
+<!-- <pagination-controls (pageChange) = "p =$event" ></pagination-controls> -->
+
+
+<mat-paginator [length] ="totalPosts" [pageSize] = "count" [pageSizeOptions]="pageSizeOptions"
+    (page)="onChangedPage($event)">
+</mat-paginator>  
+
+
+
+
+

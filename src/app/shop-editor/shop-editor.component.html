@@ -1,0 +1,47 @@
+<form [formGroup]="shopForm" (ngSubmit)="onSubmit()">
+  
+  <label>
+      Shop Name:
+    <input type="text" formControlName="shopname" required>
+  </label>
+
+
+<div formGroupName="address">
+  <h3>Address</h3>
+
+  <label>
+    Street:
+    <input type="text" formControlName="street" required>
+  </label>
+
+  <label>
+    City:
+    <input type="text" formControlName="city" required>
+  </label>
+  
+  <label>
+    State:
+    <input type="text" formControlName="state" required>
+  </label>
+
+  <label>
+    Zip Code:
+    <input type="text" formControlName="zip">
+  </label>
+</div>
+
+<div formArrayName="tags">
+    <h3>Tags</h3> <button (click)="addtags()">Add Tags</button>
+  
+    <div *ngFor="let tags of tags.controls; let i=index">
+      <!-- The repeated alias template -->
+      <label>
+        Tags:
+        <input type="text" [formControlName]="i">
+      </label>
+    </div>
+  </div>
+
+<button type="submit" [disabled]="!shopForm.valid">Submit</button>
+
+</form>

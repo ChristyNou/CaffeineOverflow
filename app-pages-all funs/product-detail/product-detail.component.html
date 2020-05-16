@@ -1,0 +1,75 @@
+<div *ngIf="product">
+
+    <h2>{{product.name | uppercase}} ΛΕΠΤΟΜΕΡΕΙΕΣ</h2>
+    <div><span>Κωδικός: </span>{{product.id}}
+    </div>
+    <div>
+        <span>Περιγραφή: </span>{{product.description}}
+    </div>
+    <div>
+        <span>Κατηγορία: </span>{{product.category}}
+    </div>
+    <div>
+        <span>Κατασκευαστής: </span>{{product.construct}}
+    </div>
+    <div>
+        <span>Τύπος: </span>{{product.type}}
+    </div>
+    <div>
+        <span>Ποσότητα: </span>{{product.quantity}}
+    </div>
+    <div>
+        <span>tags: </span>{{product.tags}}
+    </div>
+    <div>
+        <span>withdrawn: </span>{{product.withdrawn}}
+    </div>
+    <div>
+      <label>Όνομα:
+        <input [(ngModel)]="product.name" placeholder="name"/>
+      </label>
+    </div>
+    <div>
+      <label>Περιγραφή:
+          <input [(ngModel)]="product.description" placeholder="description"/>
+      </label>
+    </div>
+    <div>
+        <label>Κατηγορία:
+            <input [(ngModel)]="product.category" placeholder="category"/>
+        </label>
+      </div>
+    <div>
+        <label>Κατασκευαστής:
+             <input [(ngModel)]="product.construct" placeholder="construct"/>
+        </label>
+    </div>
+
+    <div>
+        <label>Τύπος:
+            <input [(ngModel)]="product.type" placeholder="type"/>
+        </label>
+    </div>
+
+    <div>
+        <label>Ποσότητα:
+            <input [(ngModel)]="product.quantity" placeholder="quantity"/>
+        </label>
+    </div>
+
+    <div>
+      <label>tags:
+          <input [(ngModel)]="product.tags" placeholder="tags"/>
+      </label>
+    </div>
+
+    <div>
+        <label>withdrawn:
+            <input [(ngModel)]="product.withdrawn" placeholder="withdrawn"/>
+        </label>
+    </div>
+  
+    <button (click)="goBack()">Πίσω</button>
+    <button (click)="save()">Αποθήκευση</button>
+    <button class="delete" title="delete product" (click)="delete(product)">Διαγραγή</button>
+  </div>

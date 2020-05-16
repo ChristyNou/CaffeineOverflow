@@ -1,0 +1,66 @@
+<div *ngIf="shop">
+
+  <h2>{{shop.name | uppercase}} Details</h2>
+  <div><span>id: </span>{{shop._id}}
+  </div>
+  <div>
+      <span>address: </span>{{shop.address}}
+  </div>
+  <div>
+    <span>lat: </span>{{shop.lat}}
+</div>
+<div>
+  <span>lng: </span>{{shop.lng}}
+</div>
+  <div>
+      <span>tags: </span>{{shop.tags}}
+  </div>
+  <div>
+      <span>withdrawn: </span>{{shop.withdrawn}}
+  </div>
+  
+
+
+  <div>
+    <label>name:
+      <input [(ngModel)]="shop.name" placeholder="name"/>
+    </label>
+  </div>
+  <div>
+    <label>address:
+        <input [(ngModel)]="shop.address" placeholder="address"/>
+    </label>
+  </div>
+  <div>
+    <label>lat:
+        <input [(ngModel)]="shop.lat" placeholder="lat"/>
+    </label>
+  </div>
+  <div>
+    <label>lng:
+        <input [(ngModel)]="shop.lng" placeholder="lng"/>
+    </label>
+  </div>
+  <div>
+    <label>tags:
+        <input [(ngModel)]="shop.tags" placeholder="tags"/>
+    </label>
+  </div>
+  <div>
+      <label>withdrawn:
+          <input [(ngModel)]="shop.withdrawn" placeholder="withdrawn"/>
+      </label>
+    </div>
+
+
+
+  <nav>
+      <a routerLink="/updateshop/{{shop._id}}">UpdateShop</a> 
+  </nav>
+
+  <router-outlet></router-outlet>
+
+  <button (click)="goBack()">go back</button>
+  <button (click)="save()">save</button> 
+  <button class="delete" title="delete shop" (click)="delete(shop)">delete</button>
+</div>

@@ -1,0 +1,22 @@
+<p>
+
+</p>
+
+<div>
+    <nav>
+        <a routerLink="/addproduct">AddProduct</a> 
+    </nav>
+    <router-outlet></router-outlet>
+</div>
+
+<h2>My Products</h2>
+
+<ul class="products">
+  <li *ngFor="let product of products">
+   <a routerLink="/products/{{product._id}}">
+      <span class="badge">{{product._id}}</span> {{product.name}}
+    </a> 
+  <button class="delete" title="delete product"
+  (click)="delete(product)">x</button>
+  </li> 
+</ul>
