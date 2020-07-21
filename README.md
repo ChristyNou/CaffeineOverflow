@@ -1,27 +1,41 @@
 # CaffeineOverflow -group project
-Christina Nakou Anastasia Mela Giannis Grigorakos Panagiotis Vekios Theodoros Davarakis
+Christina Nakou
 
-To test and run the project
+Anastasia Mela 
+
+Giannis Grigorakos 
+
+Panagiotis Vekios 
+
+Theodoros Davarakis
+
+### To test and run the project
 
 For the backend:
 
 The main code is in the scr path.
 
-Run: git clone.
+Clone the repo and do the following: 
 
-install Node.js.
+- install Node.js
 
-install MongoDB.
+- install MongoDB
 
-Run: npm install set caffeine_overflow_jwtPrivateKey=caffeine/ export caffeine_overflow_jwtPrivateKey=caffeine
+- and run: 
 
-sudo mongod node index.js backend is running and listening to port 8765.
+`npm install set caffeine_overflow_jwtPrivateKey=caffeine/ export caffeine_overflow_jwtPrivateKey=caffeine`
+
+`sudo mongod node index.js` 
+Then backend is running and listening to port 8765.
 
 For the frondend :
 
-the code is in path frontent.zip Run:
-npm install npm install -g @angular/cli
+the code is in path frontent.zip 
+Clone the repo and run the following: 
 
-ng serve --ssl true --ssl-key "<..path_of_backend/backend/server.key>" --ssl-cert "<..path_of_backend/backend/server.cert>"
+`npm install npm install -g @angular/cli`
 
-Last step: Open on browser the page: https://localhost:4200/
+`ng serve --ssl true --ssl-key "<..path_of_backend/backend/server.key>" --ssl-cert "<..path_of_backend/backend/server.cert>"`
+
+Last step: 
+- Navigate on browser the page: https://localhost:4200/
